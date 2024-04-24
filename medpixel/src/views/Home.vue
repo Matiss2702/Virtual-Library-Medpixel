@@ -1,4 +1,9 @@
 <template>
-    <h1>hello</h1>
+    <Carousel />
 </template>
-<script></script>
+
+<script setup>
+import Carousel from '../components/Carousel.vue';
+
+const props = defineProps(['imgUrl','imgAlt', 'cardTitle','cardDescription','cardLink'])
+</script>

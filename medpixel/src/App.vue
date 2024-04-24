@@ -1,26 +1,10 @@
 <template>
-  <div id="app">
+    <Navbar/>
     <main>
       <router-view></router-view>
     </main>
-  </div>
 </template>
 
 <script setup>
+import Navbar from './components/Navbar.vue';
 </script>
-
-<style>
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrer le contenu verticalement */
-  align-items: center; /* Centrer le contenu horizontalement */
-}
-</style>
