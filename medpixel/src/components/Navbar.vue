@@ -5,15 +5,22 @@
                 <li><a href="/">Logo</a></li>
             </ul>
             <ul class="navigation">
-                <li><a href="/cardiologie">Cardiologie</a></li>
-                <li><a href="/neurologie">Neurologie</a></li>
-                <li><a href="/oncologie">Oncologie</a></li>
+                <li><a :class="{ active: isLinkActive('/cardiologie') }" href="/cardiologie">Cardiologie</a></li>
+                <li><a :class="{ active: isLinkActive('/neurologie') }" href="/neurologie">Neurologie</a></li>
+                <li><a :class="{ active: isLinkActive('/oncologie') }" href="/oncologie">Oncologie</a></li>
             </ul>
         </nav>
     </header>
 </template>
 
 <script>
+    export default {
+        methods: {
+            isLinkActive(route) {
+                return this.$route.path.startsWith(route);
+            }
+        }
+    }
 </script>
 
 <style>
@@ -41,6 +48,7 @@
         padding: .5rem 1rem;
     }
 
+    nav li a.active,
     nav li a:hover,
     nav li a:focus{
         text-decoration: underline;

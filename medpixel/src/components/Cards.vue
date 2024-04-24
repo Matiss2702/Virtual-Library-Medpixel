@@ -3,7 +3,7 @@
     <div class="card-body">
       <h3 class="card-title">{{ cardTitle }}</h3>
       <div class="card-description">{{ cardDescription }}</div>
-      <router-link :to="cardLink">Link</router-link>
+      <router-link :to="cardLink">En savoir plus</router-link>
     </div>
     <div class="card-img">
       <img :src="imgUrl" :alt="imgAlt" />
@@ -13,11 +13,11 @@
 
 <script setup>
 const props = defineProps({
-  imgUrl: String,
-  imgAlt: String,
-  cardTitle: String,
-  cardDescription: String,
-  cardLink: String
+    imgUrl: String,
+    imgAlt: String,
+    cardTitle: String,
+    cardDescription: String,
+    cardLink: String
 });
 </script>
 
@@ -46,7 +46,6 @@ const props = defineProps({
         width: 100%;
         height: 100%;
         min-width: 450px;
-        max-height: 350px;
         aspect-ratio: 16/9;
         vertical-align: middle;
     }
@@ -61,10 +60,9 @@ const props = defineProps({
     }
 
     .card-description{
-      word-wrap: break-word;
-      text-wrap: wrap;
-      max-height: 103px;
-      overflow: hidden;
+        word-wrap: break-word;
+        text-wrap: wrap;
+        overflow: hidden;
     }
 
     .card-description::after {
@@ -88,4 +86,46 @@ const props = defineProps({
     .card-container a:focus{
         background-color: var(--secondary-clr);
     }
+
+    @media (max-width: 767px) {
+        .card-container {
+            grid-template-columns: none;
+            max-height: none;
+        }
+    
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            line-height: 130%;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+      
+        .card-img {
+            order: -1;
+            width: 100%;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 16/9;
+            vertical-align: middle;
+            min-width: 0;
+            max-height: none;
+        }
+
+      
+        .card-description {
+            word-wrap: break-word;
+            overflow: hidden;
+            max-height: none;
+        }
+    }
+    
 </style>
