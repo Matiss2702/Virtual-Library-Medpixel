@@ -13,14 +13,14 @@
     </header>
 </template>
 
-<script>
-    export default {
-        methods: {
-            isLinkActive(route) {
-                return this.$route.path.startsWith(route);
-            }
-        }
-    }
+<script setup lang="ts">
+    import { useRoute } from 'vue-router';
+
+    const route = useRoute();
+
+    const isLinkActive = (routePath: string) => {
+        return route.path.startsWith(routePath);
+    };
 </script>
 
 <style>

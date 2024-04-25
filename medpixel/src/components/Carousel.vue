@@ -1,24 +1,24 @@
 <template>
-  <div class="carousel-container">
-    <button v-if="!isMobile" @click="prev" class="arrow left-arrow">⟨</button>
-    <div class="carousel" :class="{ 'mobile-view': isMobile }" ref="carousel" :style="carouselStyle">
-      <div v-for="item in items" :key="item.id" class="slide">
-        <Card
-            :img-url="item.imgUrl"
-            :img-alt="item.imgAlt"
-            :card-title="item.cardTitle"
-            :card-description="item.cardDescription"
-            :card-link="item.cardLink"
-        />
-      </div>
+    <div class="carousel-container">
+        <button v-if="!isMobile" @click="prev" class="arrow left-arrow">⟨</button>
+        <div class="carousel" :class="{ 'mobile-view': isMobile }" ref="carousel" :style="carouselStyle">
+            <div v-for="item in items" :key="item.id" class="slide">
+                <Card
+                    :img-url="item.imgUrl"
+                    :img-alt="item.imgAlt"
+                    :card-title="item.cardTitle"
+                    :card-description="item.cardDescription"
+                    :card-link="item.cardLink"
+                />
+            </div>
+        </div>
+        <button v-if="!isMobile" @click="next" class="arrow right-arrow">⟩</button>
     </div>
-    <button v-if="!isMobile" @click="next" class="arrow right-arrow">⟩</button>
-  </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
-import { ref, computed, watchEffect, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import Card from './Cards.vue';
 import cardiologieImage from '../assets/cardiologie-card.jpg';
 import neurologieImage from '../assets/neurologie-card.jpg';
@@ -32,11 +32,11 @@ const items = ref([
 
 const currentIndex = ref(0);
 
-const visibleCount = 1;
+// const visibleCount = 1;
 
-const visibleItems = computed(() => {
-  return items.value.slice(currentIndex.value, currentIndex.value + visibleCount);
-});
+// const visibleItems = computed(() => {
+//     return items.value.slice(currentIndex.value, currentIndex.value + visibleCount);
+// });
 
 const carouselStyle = computed(() => {
     const offset = currentIndex.value * 100;
@@ -135,8 +135,8 @@ onUnmounted(() => {
     }
 
     @media screen and (min-width:640px){
-         .slide{
+        .slide{
             margin: 0 1rem;
-         }
+        }
     }
 </style>

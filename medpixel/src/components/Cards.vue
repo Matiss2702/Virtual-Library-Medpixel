@@ -1,24 +1,27 @@
 <template>
   <div class="card-container">
     <div class="card-body">
-      <h3 class="card-title">{{ cardTitle }}</h3>
-      <div class="card-description">{{ cardDescription }}</div>
-      <router-link :to="cardLink">En savoir plus</router-link>
+        <h3 class="card-title">{{ cardTitle }}</h3>
+        <div class="card-description">{{ cardDescription }}</div>
+        <router-link :to="cardLink">En savoir plus</router-link>
     </div>
     <div class="card-img">
-      <img :src="imgUrl" :alt="imgAlt" />
+        <img :src="imgUrl" :alt="imgAlt" />
     </div>
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-    imgUrl: String,
-    imgAlt: String,
-    cardTitle: String,
-    cardDescription: String,
-    cardLink: String
-});
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+import { defineProps } from 'vue';
+
+defineProps<{
+  imgUrl: string;
+  imgAlt: string;
+  cardTitle: string;
+  cardDescription: string;
+  cardLink: string;
+}>();
 </script>
 
 <style>
@@ -49,7 +52,7 @@ const props = defineProps({
         aspect-ratio: 16/9;
         vertical-align: middle;
     }
-    
+
     .card-body{
         display: flex;
         flex-direction: column;
@@ -92,7 +95,7 @@ const props = defineProps({
             grid-template-columns: none;
             max-height: none;
         }
-    
+
         .card-body {
             display: flex;
             flex-direction: column;
@@ -102,7 +105,6 @@ const props = defineProps({
             overflow: hidden;
         }
 
-      
         .card-img {
             order: -1;
             width: 100%;
@@ -120,7 +122,6 @@ const props = defineProps({
             max-height: none;
         }
 
-      
         .card-description {
             word-wrap: break-word;
             overflow: hidden;
