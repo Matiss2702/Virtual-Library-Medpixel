@@ -1,6 +1,6 @@
 <template>
     <Navbar/>
-    <main>
+    <main class="z-10 py-8">
       <router-view></router-view>
     </main>
 </template>

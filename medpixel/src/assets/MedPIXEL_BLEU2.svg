@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Couleur" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1533.74 496.94">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Pixeled, Pixeled;
+        font-size: 142.17px;
+      }
+
+      .cls-2 {
+        font-family: Montserrat-Regular, Montserrat;
+        font-size: 255.91px;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: #2d52f1;
+      }
+    </style>
+  </defs>
+  <g id="Bleu2">
+    <rect class="cls-3" x="0" y="0" width="1533.74" height="496.94"/>
+    <text class="cls-4" transform="translate(153.66 314.59)"><tspan class="cls-2" x="0" y="0">Med</tspan><tspan class="cls-1" x="572.45" y="0">PIXEL</tspan></text>
+  </g>
+</svg>
