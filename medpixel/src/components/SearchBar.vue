@@ -19,9 +19,7 @@ import { ref } from 'vue';
 const searchQuery = ref('');
 
 function onSearch() {
-  // Implémentez la logique de recherche ici
   console.log('Recherche pour:', searchQuery.value);
-  // Vous pourriez vouloir émettre un événement ou faire une redirection
 }
 </script>
 
@@ -29,11 +27,11 @@ function onSearch() {
 .search-bar-container {
     display: flex;
     align-items: center;
-    background-color: white; /* Changez la couleur de fond si nécessaire */
+    background-color: white;
     padding: 0.5rem 1rem;
-    border-radius: 9999px; /* forme de pilule */
+    border-radius: 9999px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    max-width: 500px; /* ou la largeur de votre choix */
+    max-width: 500px;
     width: 100%;
 }
 
@@ -41,7 +39,7 @@ function onSearch() {
     flex-grow: 1;
     border: none;
     outline: none;
-    background-color: white; /* Changez la couleur de fond si nécessaire */
+    background-color: white;
     margin-right: 0.5rem;
 }
 
@@ -55,6 +53,6 @@ function onSearch() {
 .search-icon {
     width: 1.5em;
     height: 1.5em;
-    color: white; /* Icône de couleur blanche */
+    color: white;
 }
 </style>
