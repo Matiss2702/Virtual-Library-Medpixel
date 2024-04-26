@@ -9,5 +9,4 @@
 </template>
 
 <script setup lang="ts">
-    import Carousel from '../components/SearchBar.vue';
 </script>

@@ -21,10 +21,9 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
 import { defineProps } from 'vue';
 
-const props = defineProps({
+defineProps({
   cardDate: String,
   readTime: String,
   imgUrl: String,
@@ -44,5 +43,4 @@ const props = defineProps({
   gap: 0.5rem;
 }
 
-/* Styles supplémentaires et responsive si nécessaire */
 </style>

@@ -7,22 +7,22 @@ import Oncologie from '@/views/Oncologie.vue';
 
 const routes = [
     {
-        path: '/Virtual-Library-Medpixel/',
+        path: '/',
         name: 'Home',
         component: Home,
     },
     {
-        path: '/Virtual-Library-Medpixel/cardiologie',
+        path: '/cardiologie',
         name: 'Cardiologie',
         component: Cardiologie,
     },
     {
-        path: '/Virtual-Library-Medpixel/neurologie',
+        path: '/neurologie',
         name: 'Neurologie',
         component: Neurologie,
     },
     {
-        path: '/Virtual-Library-Medpixel/oncologie',
+        path: '/oncologie',
         name: 'Oncologie',
         component: Oncologie,
     },
